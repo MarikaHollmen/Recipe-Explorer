@@ -1,0 +1,16 @@
+# Ignore local dependency folders and editor/project files
+# Älä ota mukaan paikallisia riippuvuuskansioita ja editori-/projektitiedostoja
+
+# This project uses a public API that does not require an API key
+# Tässä projektissa käytetään julkista APIa, joka ei vaadi API-avainta
+
+node_modules/
+.DS_Store
+Thumbs.db
+dist/
+build/
+.env
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.vscode/

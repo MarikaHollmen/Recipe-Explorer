@@ -1,0 +1,378 @@
+/* Color variables / Värimuuttujat */
+:root {
+  --bg-color: #ffffff;
+  --bg-image: linear-gradient(rgba(255,255,255,0.95), rgba(255,255,255,0.95)), url('food-pattern-black.png');
+  --text-color: #222222;
+  --card-bg: #ffffff;
+  --pill-bg: #f2f2f2;
+  --accent: #588157; 
+  --highlight: #d4a373;
+  --shadow: rgba(0, 0, 0, 0.1);
+  --fav-bg: #ffb3b3; 
+}
+
+/* Dark mode colors / Tumman tilan värit */
+body.dark-mode {
+  --bg-color: #1a1a1a;
+  --bg-image: linear-gradient(rgba(26,26,26,0.93), rgba(26,26,26,0.93)), url('food-pattern-white.png');
+  --text-color: #f5f5f5;
+  --card-bg: #2d2d2d;
+  --pill-bg: #3d3d3d;
+  --shadow: rgba(0, 0, 0, 0.4);
+}
+
+/* Global layout / Yleinen asettelu */
+html, 
+body { 
+  height: 100%; 
+  margin: 0; 
+}
+
+body { 
+  display: flex; 
+  flex-direction: column; 
+  background-color: var(--bg-color); 
+  background-image: var(--bg-image); 
+  color: var(--text-color); 
+  font-family: 'Segoe UI', sans-serif; 
+  transition: 0.3s; 
+}
+
+.content-wrapper { 
+  flex: 1 0 auto; 
+}
+
+/* Typography / Typografia */
+header { 
+  text-align: center; 
+  padding: 40px 20px; 
+}
+
+h1, 
+h2 { 
+  text-align: center !important; 
+  width: 100%; 
+}
+
+h1 { 
+  font-size: 3rem; 
+  color: var(--accent); 
+  margin-bottom: 20px; 
+}
+
+h2 { 
+  font-size: 2rem; 
+  margin-bottom: 20px; 
+}
+
+/* Search bar / Hakupalkki */
+.search-controls { 
+  display: flex; 
+  justify-content: center; 
+  align-items: flex-end; 
+  gap: 20px; 
+  flex-wrap: wrap; 
+  background: var(--card-bg); 
+  padding: 25px; 
+  border-radius: 20px; 
+  box-shadow: 0 4px 25px var(--shadow); 
+  max-width: 1100px; 
+  margin: 0 auto 40px; 
+}
+
+.control-group { 
+  display: flex; 
+  flex-direction: column; 
+  text-align: left; 
+}
+
+.control-group label { 
+  font-weight: bold; 
+  font-size: 0.8rem; 
+  color: var(--accent); 
+  margin-bottom: 5px; 
+}
+
+select { 
+  padding: 10px 15px; 
+  border-radius: 10px; 
+  border: 2px solid var(--accent); 
+  background: var(--card-bg); 
+  color: var(--text-color); 
+  min-width: 150px; 
+}
+
+.header-btns { 
+  display: flex; 
+  justify-content: center; 
+  gap: 15px; 
+  margin-bottom: 20px; 
+}
+
+button { 
+  padding: 12px 24px; 
+  border-radius: 50px; 
+  border: none; 
+  cursor: pointer; 
+  font-weight: bold; 
+  transition: 0.3s; 
+}
+
+#home-btn { 
+  background: var(--accent); 
+  color: white; 
+}
+
+#random-btn { 
+  background: var(--highlight); 
+  color: white; 
+}
+
+#view-favorites-btn { 
+  background: #8899a6; 
+  color: white; 
+}
+
+.clear-btn { 
+  background: #666; 
+  color: white; 
+}
+
+/* Recipe Grid / Reseptiruudukko */
+.results-grid { 
+  display: grid; 
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); 
+  gap: 25px; 
+  padding: 20px; 
+  max-width: 1200px; 
+  margin: 0 auto; 
+}
+
+/* Small Cards / Pienet kortit */
+.meal-card { 
+  background: var(--card-bg); 
+  border-radius: 20px; 
+  position: relative; 
+  border: 2px solid transparent; 
+  transition: 0.3s; 
+  cursor: pointer; 
+  height: 520px; 
+  overflow: hidden; 
+  box-shadow: 0 5px 15px var(--shadow); 
+  display: flex; 
+  flex-direction: column; 
+}
+
+.meal-card:hover { 
+  border-color: var(--accent); 
+  transform: translateY(-5px); 
+}
+
+.meal-card img { 
+  width: 100%; 
+  height: 160px; 
+  object-fit: cover; 
+}
+
+.meal-card h3 { 
+  padding: 10px 15px 5px; 
+  margin: 0; 
+  font-size: 1.1rem; 
+  text-align: center; 
+  color: var(--accent); 
+}
+
+/* Card Body / Kortin runko rullauksella */
+.card-body-preview { 
+  padding: 0 15px 15px; 
+  flex-grow: 1; 
+  overflow-y: auto; 
+  display: flex; 
+  flex-direction: column; 
+}
+
+/* Custom scrollbar / Rullauspalkki */
+.card-body-preview::-webkit-scrollbar {
+  width: 5px;
+}
+
+.card-body-preview::-webkit-scrollbar-thumb {
+  background: var(--accent);
+  border-radius: 10px;
+}
+
+.instructions-preview { 
+  font-size: 0.8rem; 
+  line-height: 1.4; 
+  margin-top: 10px; 
+  opacity: 0.8; 
+}
+
+/* Modal Window / Modaali-ikkuna */
+.modal { 
+  display: none; 
+  position: fixed; 
+  z-index: 1000; 
+  left: 0; 
+  top: 0; 
+  width: 100%; 
+  height: 100%; 
+  background: rgba(0,0,0,0.8); 
+  -webkit-backdrop-filter: blur(5px); /* Safari compatibility / Safari-yhteensopivuus */
+  backdrop-filter: blur(5px); 
+}
+
+.modal-content { 
+  background: var(--card-bg); 
+  margin: 2% auto; 
+  padding: 30px; 
+  border-radius: 25px; 
+  width: 90%; 
+  max-width: 800px; 
+  max-height: 90vh; 
+  overflow-y: auto; 
+  position: relative; 
+  color: var(--text-color); 
+}
+
+.close-modal { 
+  position: absolute; 
+  right: 25px; 
+  top: 15px; 
+  font-size: 40px; 
+  cursor: pointer; 
+  color: var(--accent); 
+  font-weight: bold; 
+}
+
+/* Favorite Heart / Suuri sydän */
+.fav-btn { 
+  position: absolute; 
+  top: 10px; 
+  right: 10px; 
+  background: white; 
+  border: none; 
+  border-radius: 50%; 
+  width: 50px; 
+  height: 50px; 
+  cursor: pointer; 
+  z-index: 20; 
+  display: flex; 
+  align-items: center; 
+  justify-content: center; 
+  box-shadow: 0 2px 10px rgba(0,0,0,0.2); 
+}
+
+.fav-btn span { 
+  font-size: 1.8rem; 
+}
+
+.fav-btn.active { 
+  background: var(--fav-bg); 
+}
+
+/* Pills / Ainesosapallerot */
+.ingredients-container { 
+  display: flex; 
+  flex-wrap: wrap; 
+  gap: 6px; 
+  margin: 10px 0; 
+}
+
+.ing-pill { 
+  background: var(--pill-bg); 
+  padding: 4px 10px; 
+  border-radius: 50px; 
+  font-size: 0.75rem; 
+  cursor: pointer; 
+  transition: 0.2s;
+}
+
+/* Strike-through for ingredients / Ainesosien yliviivaus */
+.ing-pill.checked { 
+  text-decoration: line-through; 
+  opacity: 0.5; 
+  background: #ccc;
+}
+
+/* Video Button / Videonappi */
+.video-link-btn { 
+  display: inline-block; 
+  background: var(--accent); 
+  color: white; 
+  padding: 8px 15px; 
+  border-radius: 10px; 
+  text-decoration: underline; 
+  font-weight: bold; 
+  font-size: 0.85rem;
+  margin-top: 10px; 
+  text-align: center; 
+}
+
+.video-link-btn:hover { 
+  filter: brightness(1.1); 
+}
+
+/* Theme Switcher / Teemakytkin */
+.theme-switch-wrapper { 
+  position: absolute; 
+  top: 20px; 
+  right: 20px; 
+  display: flex; 
+  align-items: center; 
+  gap: 10px; 
+}
+
+.theme-switch { 
+  position: relative; 
+  width: 50px; 
+  height: 26px; 
+}
+
+.theme-switch input { 
+  opacity: 0; 
+  width: 0; 
+  height: 0; 
+}
+
+.slider { 
+  position: absolute; 
+  cursor: pointer; 
+  top: 0; 
+  left: 0; 
+  right: 0; 
+  bottom: 0; 
+  background: #ccc; 
+  border-radius: 34px; 
+  transition: 0.4s; 
+}
+
+.slider:before { 
+  position: absolute; 
+  content: ""; 
+  height: 18px; 
+  width: 18px; 
+  left: 4px; 
+  bottom: 4px; 
+  background: white; 
+  border-radius: 50%; 
+  transition: 0.4s; 
+}
+
+input:checked + .slider { 
+  background: var(--accent); 
+}
+
+input:checked + .slider:before { 
+  transform: translateX(24px); 
+}
+
+/* Slim Footer / Kapea footeri */
+footer { 
+  flex-shrink: 0; 
+  text-align: center; 
+  padding: 10px 0; 
+  border-top: 1px solid var(--shadow); 
+  background: var(--card-bg); 
+  font-size: 0.8rem; 
+}

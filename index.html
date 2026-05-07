@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Main title of the app / Sovelluksen pääotsikko -->
+    <title>Recipe Finder</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Main wrapper to keep footer at the bottom / Pääkääre, joka pitää footerin alhaalla -->
+    <div class="content-wrapper">
+        <!-- Dark mode switch / Tumman tilan kytkin -->
+        <div class="theme-switch-wrapper">
+            <span>☀️</span>
+            <label class="theme-switch">
+                <input type="checkbox" id="theme-checkbox" title="Toggle dark mode">
+                <span class="slider"></span>
+            </label>
+            <span>🌙</span>
+        </div>
+
+        <header>
+            <!-- Centered header / Keskitetty otsikko -->
+            <h1>Recipe Finder</h1>
+            <div class="search-controls">
+                <!-- Category filtering / Kategoriasuodatin -->
+                <div class="control-group">
+                    <label for="category-select">Category:</label>
+                    <select id="category-select">
+                        <option value="">All Categories</option>
+                        <option value="Beef">Beef</option>
+                        <option value="Breakfast">Breakfast</option>
+                        <option value="Chicken">Chicken</option>
+                        <option value="Dessert">Dessert</option>
+                        <option value="Goat">Goat</option>
+                        <option value="Lamb">Lamb</option>
+                        <option value="Miscellaneous">Miscellaneous</option>
+                        <option value="Pasta">Pasta</option>
+                        <option value="Pork">Pork</option>
+                        <option value="Seafood">Seafood</option>
+                        <option value="Side">Side</option>
+                        <option value="Starter">Starter</option>
+                        <option value="Vegan">Vegan</option>
+                        <option value="Vegetarian">Vegetarian</option>
+                    </select>
+                </div>
+                <!-- Time filtering / Aikasuodatin -->
+                <div class="control-group">
+                    <label for="time-filter">Max Time:</label>
+                    <select id="time-filter">
+                        <option value="all">Any Time</option>
+                        <option value="30">Quick (&lt; 30 min)</option>
+                        <option value="60">Medium (&lt; 60 min)</option>
+                    </select>
+                </div>
+                <!-- Difficulty filtering / Vaikeustasosuodatin -->
+                <div class="control-group">
+                    <label for="difficulty-filter">Difficulty:</label>
+                    <select id="difficulty-filter">
+                        <option value="all">Any</option>
+                        <option value="Easy">Easy</option>
+                        <option value="Medium">Medium</option>
+                        <option value="Hard">Hard</option>
+                    </select>
+                </div>
+                <div class="control-group">
+                    <button id="clear-filters-btn" class="clear-btn">Clear Filters</button>
+                </div>
+            </div>
+
+            <div class="header-btns">
+                <button id="home-btn">🏠 Home</button>
+                <button id="random-btn">🎲 Surprise Me</button>
+                <button id="view-favorites-btn">❤️ My Favorites</button>
+            </div>
+        </header>
+
+        <main>
+            <!-- Subtitle for the current view / Alaosikko nykyiselle näkymälle -->
+            <h2 id="grid-title">Latest Discoveries</h2>
+            <div id="results-grid" class="results-grid"></div>
+        </main>
+    </div>
+
+    <!-- Modal for full recipe details / Modaali reseptin yksityiskohdille -->
+    <div id="recipe-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <div id="modal-body"></div>
+        </div>
+    </div>
+
+    <!-- Narrow footer / Kapea footeri -->
+    <footer>
+        <p>&copy; 2026 Recipe Finder - Marika Hollmen</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
