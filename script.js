@@ -149,7 +149,7 @@ function toggleFav(event, id, btn) {
 }
 
 /* Event listeners / Tapahtumankuuntelijat */
-document.getElementById('home-btn').onclick = () => loadRecipes('https://www.themealdb.com/api/json/v1/1/search.php?s=', 'Latest Discoveries', true);
+document.getElementById('home-btn').onclick = () => loadRecipes('https://www.themealdb.com/api/json/v1/1/search.php?s=', 'Latest Recipes Discoveries', true);
 
 document.getElementById('random-btn').onclick = () => {
     categorySelect.value = ""; timeFilter.value = "all"; difficultyFilter.value = "all";
@@ -171,8 +171,8 @@ timeFilter.onchange = applyFilters;
 difficultyFilter.onchange = applyFilters;
 document.getElementById('clear-filters-btn').onclick = () => {
     categorySelect.value = ""; timeFilter.value = "all"; difficultyFilter.value = "all";
-    loadRecipes('https://www.themealdb.com/api/json/v1/1/search.php?s=', 'Latest Discoveries', true);
+    loadRecipes('https://www.themealdb.com/api/json/v1/1/search.php?s=', 'Latest Recipes Discoveries', true);
 };
 
 /* Initial load / Ensimmäinen lataus */
-loadRecipes('https://www.themealdb.com/api/json/v1/1/search.php?s=', 'Latest Discoveries', true);
+loadRecipes('https://www.themealdb.com/api/json/v1/1/search.php?s=', 'Latest Recipes Discoveries', true);
