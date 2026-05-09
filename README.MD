@@ -4,7 +4,7 @@
 
 A modern, responsive single-page web application that allows users to discover, filter, and save recipes. The app fetches real-time data from **TheMealDB API**, demonstrating advanced asynchronous JavaScript techniques and dynamic DOM manipulation. This project was developed for the Web Applications course at **Laurea University of Applied Sciences**.
 
-**Live Demo:** https://github.com/MarikaHollmen/Recipe-Finder
+**Live Demo:** https://marikahollmen.github.io/Recipe-Finder/
 
 **Repository:** https://github.com/MarikaHollmen/Recipe-Finder.git
 ## Features
