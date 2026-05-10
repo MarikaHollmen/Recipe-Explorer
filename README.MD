@@ -63,14 +63,27 @@ I used **GitHub Copilot** as a pair programmer to brainstorm efficient ways to m
 
 ## Project Presentation Video
 
-**Video Link:** [Insert your Loom/YouTube/OneDrive link here]
+**Video Link:** https://laureauas-my.sharepoint.com/:v:/g/personal/mah00160_laurea_fi/IQAPcHXViqC3Q6lxt9BuNan8AWhd2VO28aPMMhgqKXMPYuk?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJPbmVEcml2ZUZvckJ1c2luZXNzIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXciLCJyZWZlcnJhbFZpZXciOiJNeUZpbGVzTGlua0NvcHkifX0&e=YM0aCd
 
 **Maximum length:** 5–6 minutes.
 
 **Video Timestamps:**
 
-* **0:00** – Introduction: Project overview and learning goals.
-* **1:15** – The Code: Walkthrough of the `fetch()` function and DOM mapping logic.
-* **3:00** – The App: Demonstrating search, category filtering, and loading states.
-* **4:15** – Mobile View: Showcasing responsiveness and the ingredient checklist.
-* **5:00** – Reflection: Summary of key fixes and new skills learned.
+Here are the timestamps for the video **"Project2 Recipe Finder Marika Hollmen.mp4"** in English:
+
+* **00:00** – Application landing page and general introduction.
+* **00:16** – Source code overview: `.gitignore` and project file structure.
+* **00:46** – Walkthrough of the HTML file (`index.html`).
+* **00:54** – Review of the CSS file (`style.css`) and theme definitions (Light/Dark mode).
+* **01:17** – JavaScript logic (`script.js`): Theme switching, favorites, and state management.
+* **01:27** – Recipe fetching logic and calculation of cooking times and difficulty levels.
+* **01:36** – API data retrieval (TheMealDB) and filtering functionality.
+* **01:43** – Rendering recipe cards and opening the detail modal.
+* **01:50** – UI demonstration: Testing the Dark mode toggle.
+* **02:11** – Filtering recipes by category (e.g., Chicken).
+* **02:32** – Filtering by maximum preparation time and difficulty level.
+* **03:13** – Adding recipes to the "Favorites" list (Heart icon).
+* **03:22** – Exploring the "My Favorites" view.
+* **03:33** – Viewing recipe details, ingredients, and instructions.
+* **04:17** – Responsiveness testing (mobile view).
+* **04:30** – Project GitHub repository and documentation (`README.md`).
