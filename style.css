@@ -21,6 +21,10 @@ body.dark-mode {
   --shadow: rgba(0, 0, 0, 0.4);
 }
 
+body.dark-mode h1 {
+  color: white;
+}
+
 /* Global layout / Yleinen asettelu */
 html, 
 body { 
