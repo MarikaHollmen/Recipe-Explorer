@@ -376,3 +376,31 @@ footer {
   background: var(--card-bg); 
   font-size: 0.8rem; 
 }
+
+/* Responsive Design / Responsiivinen suunnittelu */
+@media (max-width: 1200px) {
+  .results-grid {
+    grid-template-columns: repeat(3, minmax(220px, 1fr));
+  }
+}
+
+@media (max-width: 900px) {
+  .results-grid {
+    grid-template-columns: repeat(2, minmax(220px, 1fr));
+  }
+}
+
+@media (max-width: 600px) {
+  .results-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .search-controls {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .header-btns {
+    flex-direction: column;
+  }
+}

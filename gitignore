@@ -1,7 +1,7 @@
 # Ignore local dependency folders and editor/project files
 # Älä ota mukaan paikallisia riippuvuuskansioita ja editori-/projektitiedostoja
 
-# This project uses a public API that does not require an API key
+# This project uses a public API that does not require an API key **TheMealDB API**
 # Tässä projektissa käytetään julkista APIa, joka ei vaadi API-avainta
 
 node_modules/
